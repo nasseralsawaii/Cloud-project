@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نظام الفوترة — سلطنة عُمان</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+</head>
+<body>
+
+<!-- ================= شاشة الدخول والتسجيل ================= -->
+<div id="auth-screen" class="auth-screen hidden">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <span class="auth-logo">🧾</span>
+      <h1>نظام الفوترة</h1>
+      <p class="muted">فواتير ضريبية نظامية للمنشآت الصغيرة في سلطنة عُمان</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-auth-tab="login" role="tab">تسجيل الدخول</button>
+      <button class="tab" data-auth-tab="register" role="tab">حساب جديد</button>
+    </div>
+
+    <form id="login-form" class="auth-form">
+      <label>البريد الإلكتروني
+        <input type="email" name="email" required autocomplete="username">
+      </label>
+      <label>كلمة المرور
+        <input type="password" name="password" required autocomplete="current-password">
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">دخول</button>
+    </form>
+
+    <form id="register-form" class="auth-form hidden">
+      <label>اسم المنشأة
+        <input type="text" name="org_name" required placeholder="مثال: مؤسسة النور للتجارة">
+      </label>
+      <label>اسمك
+        <input type="text" name="name" autocomplete="name">
+      </label>
+      <label>البريد الإلكتروني
+        <input type="email" name="email" required autocomplete="username">
+      </label>
+      <label>كلمة المرور
+        <input type="password" name="password" required minlength="8" autocomplete="new-password">
+        <small class="muted">٨ أحرف على الأقل</small>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">إنشاء الحساب</button>
+    </form>
+
+    <p id="auth-error" class="error-box hidden"></p>
+  </div>
+</div>
+
+<!-- ================= التطبيق ================= -->
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="auth-logo">🧾</span>
+      <div>
+        <strong id="org-name">—</strong>
+        <small class="muted" id="plan-badge"></small>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-view="dashboard"><span>📊</span> الرئيسية</button>
+      <button class="nav-item" data-view="invoices"><span>🧾</span> الفواتير</button>
+      <button class="nav-item" data-view="customers"><span>👥</span> العملاء</button>
+      <button class="nav-item" data-view="items"><span>📦</span> الأصناف والخدمات</button>
+      <button class="nav-item" data-view="reports"><span>📈</span> التقارير والضريبة</button>
+      <button class="nav-item" data-view="settings"><span>⚙️</span> الإعدادات</button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <small class="muted" id="user-email"></small>
+      <button class="btn btn-ghost btn-small" id="logout-btn">خروج</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div id="view-container"></div>
+  </main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<!-- نافذة منبثقة عامة -->
+<div id="modal-backdrop" class="modal-backdrop hidden">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <h3 id="modal-title"></h3>
+      <button class="btn btn-ghost btn-small" id="modal-close" aria-label="إغلاق">✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

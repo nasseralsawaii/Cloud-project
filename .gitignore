@@ -1,0 +1,15 @@
+# قاعدة البيانات — بيانات المنشأة لا تُرفع إلى المستودع
+data/
+*.db
+*.db-wal
+*.db-shm
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+.DS_Store
+*.swp
+.idea/
+.vscode/
