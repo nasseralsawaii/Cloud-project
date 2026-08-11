@@ -1,0 +1,38 @@
+name: Package browser game
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "index.html"
+      - "manifest.webmanifest"
+      - "LICENSE"
+      - "README.md"
+      - ".github/workflows/package.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Build standalone ZIP
+        run: |
+          mkdir -p release
+          cp index.html manifest.webmanifest LICENSE README.md release/
+          cd release
+          zip -9 ../saeed-oasis-game-v2.0.0.zip index.html manifest.webmanifest LICENSE README.md
+      - name: Verify package
+        run: |
+          unzip -t saeed-oasis-game-v2.0.0.zip
+          unzip -l saeed-oasis-game-v2.0.0.zip | grep -q "index.html"
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: saeed-oasis-game-v2.0.0
+          path: saeed-oasis-game-v2.0.0.zip
+          retention-days: 90
