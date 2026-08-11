@@ -1,0 +1,30 @@
+name: اقتراح ميزة | Feature request
+description: اقترح تحسينًا مفيدًا للعبة أو للمحتوى التعليمي
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: الحاجة | Need
+      description: ما المشكلة أو الفرصة التي يعالجها الاقتراح؟
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: الحل المقترح | Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: المجال | Area
+      options:
+        - Gameplay
+        - Accessibility
+        - Arabic localization
+        - Educational content
+        - Performance
+        - Documentation
+    validations:
+      required: true

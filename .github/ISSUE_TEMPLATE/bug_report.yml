@@ -1,0 +1,30 @@
+name: بلاغ خطأ | Bug report
+description: أبلغ عن مشكلة قابلة للتكرار في اللعبة
+title: "[Bug] "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: وصف المشكلة | Summary
+      description: ماذا حدث، وماذا كنت تتوقع؟
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: خطوات إعادة المشكلة | Reproduction steps
+      placeholder: "1. افتح اللعبة\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: المتصفح والجهاز | Browser and device
+      placeholder: "Chrome 140, Android 15"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: معلومات إضافية | Additional context
+      description: أضف لقطة شاشة أو فيديو إن أمكن.
