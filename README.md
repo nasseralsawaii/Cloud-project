@@ -1,6 +1,8 @@
 # سعيد ناصر — رحلة الواحة  
 # Saeed Nasser — Oasis Journey
 
+🎮 **[العب الآن في المتصفح | Play now](https://nasseralsawaii.github.io/saeed-oasis-game/)**
+
 لعبة منصات عربية مفتوحة المصدر مستوحاة من البيئات العُمانية، تعمل مباشرة في المتصفح على الهاتف والحاسوب.
 
 An open-source Arabic browser platformer inspired by Omani environments, designed for mobile and desktop play.
