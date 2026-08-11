@@ -1,78 +1,72 @@
-# سعيد ناصر — رحلة الواحة  
-# Saeed Nasser — Oasis Journey
+# رحلة الواحة | Oasis Journey
 
-🎮 **[العب الآن في المتصفح | Play now](https://nasseralsawaii.github.io/saeed-oasis-game/)**
+**لعبة منصات عربية مفتوحة المصدر من ست مراحل، مستوحاة من البيئات العُمانية وتعمل مباشرة في المتصفح.**
 
-لعبة منصات عربية مفتوحة المصدر مستوحاة من البيئات العُمانية، تعمل مباشرة في المتصفح على الهاتف والحاسوب.
+[🎮 العب النسخة الرئيسية](https://saeed-oasis-game.nasseralsawaii.chatgpt.site) · [نسخة GitHub Pages](https://nasseralsawaii.github.io/saeed-oasis-game/)
 
-An open-source Arabic browser platformer inspired by Omani environments, designed for mobile and desktop play.
+An open-source, Arabic-first six-stage browser platformer inspired by Omani landscapes, designed for mobile and desktop play.
 
 ![Mobile gameplay preview](docs/gameplay-mobile.jpeg)
 
-## لماذا هذا المشروع؟ | Why this project?
+## الإصدار 2.0 | Version 2.0
 
-يقدّم المشروع محتوى تفاعليًا عربيًا أصيلًا، ويعرض مثالًا خفيفًا وقابلًا لإعادة الاستخدام لبناء ألعاب HTML5 Canvas تدعم العربية واتجاه الكتابة من اليمين إلى اليسار.
+تتدرج الرحلة عبر ست بيئات:
 
-The project expands Arabic-first interactive content and offers educators and beginner developers a lightweight, reusable example of an RTL HTML5 Canvas game.
+1. الكثبان الأولى
+2. سوق الفوانيس
+3. ليل النجوم
+4. وادي الصخور
+5. قلعة الرمال
+6. واحة الفجر
+
+يحفظ الإصدار الجديد التقدم بين المراحل ويتيح متابعة الرحلة لاحقًا، مع انتقال النقاط والسلاح والذخيرة والقوة بين المراحل.
 
 ## المزايا | Features
 
-- ثلاث مراحل مستوحاة من البيئة العُمانية.
-- مهام وصناديق ومفاتيح ونجوم وأعداء ونظام نقاط متدرج.
-- قفز وإطلاق واندفاع مع مؤثرات صوتية وحركية.
-- تحكم بلوحة المفاتيح وأزرار لمس متجاوبة.
-- حفظ أفضل نتيجة محليًا في المتصفح.
-- بنية خفيفة دون خادم خلفي أو إطار عمل.
-- Three Omani-inspired environments with missions and hazards.
-- Responsive keyboard and touch controls.
-- Local best-score persistence and offline-friendly static architecture.
+- ست مراحل طويلة ومتدرجة مع أهداف وميداليات.
+- 12 نوعًا من الوحوش، منها العقرب والأفعى والخفاش وحارس الصخور والمومياء والعنقاء.
+- ثلاثة أسلحة متدرجة: مقلاع البذور، عصا البرق، ومدفع الواحة.
+- السيارة وبساط الريح والبوابات السرية ونقاط الحفظ.
+- 30 طلقة عند الحصول على السلاح، وتتضاعف الذخيرة عند العثور على صندوق مماثل.
+- حفظ أفضل نتيجة وتقدم الحملة محليًا في المتصفح.
+- تحكم بلوحة المفاتيح وأزرار لمس دلالية ومتجاوبة.
+- فحوص آلية لبنية المراحل وسلامة JavaScript.
+- Static, framework-free game runtime with no backend required.
 
-## التشغيل | Run locally
+## التحكم | Controls
 
-لا يحتاج المشروع إلى تثبيت. نزّل الملفات وافتح `index.html` في متصفح حديث، أو شغّل خادمًا محليًا بسيطًا:
+| الإجراء | لوحة المفاتيح |
+| --- | --- |
+| الحركة | الأسهم أو A / D |
+| القفز | Space |
+| استخدام السلاح | F |
+| الاندفاع | Shift |
+| مغادرة السيارة | E |
+| الإيقاف المؤقت | Escape |
+
+تظهر أزرار اللمس تلقائيًا على الهاتف والجهاز اللوحي.
+
+## التشغيل محليًا | Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-ثم افتح `http://localhost:8000`.
+ثم افتح `http://localhost:8000`. لا توجد خطوة بناء مطلوبة.
 
-No build step is required. Open `index.html` directly or serve the repository with any static web server.
-
-## التحكم | Controls
-
-| الإجراء | Keyboard |
-| --- | --- |
-| الحركة | Arrow keys or A / D |
-| القفز | Space |
-| الإطلاق | F |
-| الاندفاع | Shift |
-| الإيقاف المؤقت | Pause button |
-
-تظهر أزرار اللمس تلقائيًا على الهواتف والأجهزة اللوحية.
-
-## الصيانة والمساهمة | Maintenance
+## المشروع المفتوح | Open source
 
 - [خريطة التطوير](ROADMAP.md)
 - [دليل المساهمة](CONTRIBUTING.md)
 - [سجل التغييرات](CHANGELOG.md)
 - [سياسة الأمان](SECURITY.md)
+- [ملاحظات إصدار 2.0](RELEASE_NOTES_2.0.md)
 
-تُراجع البلاغات وطلبات التحسين عبر GitHub Issues. نرحب بالمساهمات التي تحسن الوصول، والأداء، ودعم العربية، والقيمة التعليمية.
-
-Issues and pull requests are welcome, especially for accessibility, performance, Arabic localization, testing, and educational missions.
-
-## التقنيات | Technology
-
-- HTML5 Canvas
-- CSS3
-- Vanilla JavaScript
-- Arabic RTL responsive design
-- GitHub Actions for validation and Pages deployment
+نرحب بالمساهمات في الوصول، والأداء، ودعم العربية، وتصميم المراحل والقيمة التعليمية.
 
 ## المؤلف والمشرف الرئيسي | Maintainer
 
-ناصر بن راشد الصواعي — [@nasseralsawaii](https://github.com/nasseralsawaii)
+ناصر الصواعي — [@nasseralsawaii](https://github.com/nasseralsawaii)
 
 ## الرخصة | License
 
