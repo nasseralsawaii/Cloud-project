@@ -1,12 +1,16 @@
 {
-  "name": "سعيد ناصر — رحلة الواحة",
+  "name": "رحلة الواحة — ست مراحل عُمانية",
   "short_name": "رحلة الواحة",
-  "description": "لعبة منصات عربية مفتوحة المصدر مستوحاة من البيئات العُمانية.",
+  "description": "لعبة منصات عربية مجانية من ست مراحل مستوحاة من البيئات العُمانية.",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#071224",
-  "theme_color": "#071224"
+  "background_color": "#07111e",
+  "theme_color": "#07111e",
+  "categories": [
+    "games",
+    "education",
+    "entertainment"
+  ]
 }
